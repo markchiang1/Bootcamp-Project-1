@@ -1,4 +1,5 @@
 
+
 // Google Mapps API calls below:
 // search term to be updated with id where search value to be inputted
 var mapSearch = $("#mapsearchID here")
@@ -25,3 +26,19 @@ $("#searchbtn").on("click",function(){
 
 })
 })
+
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAcCsp_1wcbimGlS4lKAtxlNz55p5-HbX4",
+    authDomain: "bootcamp-project-1-47c35.firebaseapp.com",
+    databaseURL: "https://bootcamp-project-1-47c35.firebaseio.com",
+    projectId: "bootcamp-project-1-47c35",
+    storageBucket: "bootcamp-project-1-47c35.appspot.com",
+    messagingSenderId: "692503538126"
+  };
+  firebase.initializeApp(config);
+
+  // datebase Var
+  var database = firebase.database() 
+
