@@ -15,7 +15,7 @@ $.ajax({
     url: googelqueryUrl,
     method: 'GET'
 }).then(function (result) {
-    $(".gif-holder").empty()
+    // add code
 
 
 
