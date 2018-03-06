@@ -1,33 +1,3 @@
-
-
-// Google Mapps API calls below:
-// search term to be updated with id where search value to be inputted
-var mapSearch = $("#mapsearchID here")
-
-var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
-
-var googlequeryURL = "https://www.google.com/maps/embed/v1/place?key="+googleAPIKey+"&q="+mapSearch
-
-
-
-// AJAX Call Below
-$.ajax({
-    url: googelqueryUrl,
-    method: 'GET'
-}).then(function (result) {
-    // add code
-
-
-
-$("#searchbtn").on("click",function(){
-    $("#MapsDiv here").empty()
-    // Embed Code below, to be pushed search complete
-    $("#MapsDiv here").append("<iframe width='450' height='250' frameborder='0' style='border:0' src="+googlequeryURL+" allowfullscreen></iframe>")
-
-})
-})
-
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAcCsp_1wcbimGlS4lKAtxlNz55p5-HbX4",
@@ -36,9 +6,40 @@ var config = {
     projectId: "bootcamp-project-1-47c35",
     storageBucket: "bootcamp-project-1-47c35.appspot.com",
     messagingSenderId: "692503538126"
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
 
-  // datebase Var
-  var database = firebase.database() 
+// datebase Var
+var database = firebase.database()
+
+
+// Google Mapps API calls below:
+// search term to be updated with id where search value to be inputted
+
+
+// AJAX Call Below
+
+$("#submitBtn").on("click", function () {
+    $("#addMaps").empty()
+    var mapSearch = $("#search").val()
+    
+    var inputSearch = String(mapSearch)
+
+    var plusAdd = inputSearch.replace(" ","+")
+    
+    var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
+    
+    var googlequeryURL = "https://www.google.com/maps/embed/v1/place?key=" + googleAPIKey + "&q="+plusAdd
+    
+    console.log("button works")
+    console.log(inputSearch)
+ 
+
+
+        // Embed Code below, to be pushed search complete
+        $("#addMaps").append("<iframe width='450' height='250' frameborder='0' style='border:0' src=" + googlequeryURL + " allowfullscreen></iframe>")
+
+  
+})
+
 
