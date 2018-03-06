@@ -1,6 +1,9 @@
-
-.footer{
-    display: flex;
-   min-height: 100vh;
-   flex-direction: column;;
+.marketing-site-footer-bottom{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
 }
+  
+
+
+  
