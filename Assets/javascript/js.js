@@ -20,7 +20,7 @@ var database = firebase.database()
 // AJAX Call Below
 
 $("#submitBtn").on("click", function () {
-    $("#addMaps").empty()
+    $("#mapsDump").empty()
     var mapSearch = $("#search").val()
     
     var inputSearch = String(mapSearch)
@@ -37,7 +37,7 @@ $("#submitBtn").on("click", function () {
 
 
         // Embed Code below, to be pushed search complete
-        $("#addMaps").append("<iframe width='450' height='250' frameborder='0' style='border:0' src=" + googlequeryURL + " allowfullscreen></iframe>")
+        $("#mapsDump").append("<iframe width='650' height='450' frameborder='0' style='border:0' src=" + googlequeryURL + " allowfullscreen></iframe>")
 
   
 })
