@@ -13,6 +13,7 @@ firebase.initializeApp(config);
 var database = firebase.database()
 
 
+
 // Google Mapps API calls below:
 // search term to be updated with id where search value to be inputted
 
@@ -20,11 +21,14 @@ var database = firebase.database()
 // AJAX Call Below
 
 $("#submitBtn").on("click", function () {
-    $("#mapsDump").empty()
+    $("#addMaps").empty()
     var mapSearch = $("#search").val()
     
     var inputSearch = String(mapSearch)
 
+    database.ref().push({
+        city:mapSearch
+    })
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
@@ -37,7 +41,7 @@ $("#submitBtn").on("click", function () {
 
 
         // Embed Code below, to be pushed search complete
-        $("#mapsDump").append("<iframe width='650' height='450' frameborder='0' style='border:0' src=" + googlequeryURL + " allowfullscreen></iframe>")
+        $("#addMaps").append("<iframe width='650' height='450' frameborder='0' style='border:0' src=" + googlequeryURL + " allowfullscreen></iframe>")
 
   
 })
