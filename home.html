@@ -1,80 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <link rel="stylesheet" href="Assets/css/style.css">
-  </head>
-  <body> 
-    <div class= "container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Working Title</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Log In
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <span id ="user"></span>
-                  <div class="dropdown-divider"></div>
-                  <button id="logBtn">log Out</button>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input id="search"class="form-control mr-sm-2" type="search" placeholder="Search By City" aria-label="Search">
-              <button id="submitBtn"class="btn" type="submit"><i class="fas fa-search"></i>Search</button>
-            </form>
-          </div>
-        </nav>
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Working Title</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Log In
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <span id="user"></span>
+              <div class="dropdown-divider"></div>
+              <button id="logBtn">log Out</button>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search By City" aria-label="Search">
+          <button id="submitBtn" class="btn" type="submit">
+            <i class="fas fa-search"></i>Search</button>
+        </form>
+      </div>
+    </nav>
 
     <div class="row">
-
-      <div id="addMeet"class="col-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo neque repellat necessitatibus accusamus quo praesentium corrupti nostrum sit! Provident, nemo nihil vitae recusandae incidunt quas sapiente magni alias odit. Odit.
-      Quidem illo eos, illum doloribus explicabo doloremque similique nisi animi qui ipsum voluptate molestiae autem fugit temporibus consectetur tempora repudiandae obcaecati? Ut culpa officia necessitatibus quis magni beatae at adipisci?
-      Rem facere nam sunt. Incidunt similique laboriosam veritatis explicabo placeat soluta, eveniet aspernatur aut voluptas architecto ab dignissimos unde nesciunt? Commodi officiis harum praesentium aut quisquam itaque deleniti quam quia!
-      Odio modi fugit maxime praesentium expedita corrupti perferendis repudiandae quasi, dolores at, recusandae illum eum officiis illo quod! Minima id esse et quisquam alias doloribus fugiat dolorem consequuntur eveniet odit.
-      Eaque explicabo vero nemo quasi quas voluptate accusamus nostrum? Nesciunt, nobis hic maiores culpa laudantium illum cum soluta obcaecati excepturi velit quis voluptatibus, non quibusdam. Quia earum ea quaerat asperiores.
-      At, enim. Facilis veniam quisquam eius expedita nobis accusamus eum quibusdam quae labore molestiae ex, facere consectetur nemo incidunt laborum iusto inventore libero natus hic nisi est reprehenderit in magnam.
-      Odio, temporibus fugiat nisi vero non voluptas sequi repellat, nam necessitatibus qui quos eaque, voluptate quis dolores incidunt quibusdam veniam dicta odit suscipit molestiae? Optio commodi ipsum necessitatibus vitae quod?
-      Doloribus magnam architecto qui? Earum rerum harum reiciendis, in cum ad obcaecati similique eveniet consequuntur, assumenda illum enim fuga iusto maiores temporibus molestias? Ratione sit, iure a doloribus dolore vel!
-
-      </div>
-      <div id="addMaps"class="col-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo neque repellat necessitatibus accusamus quo praesentium corrupti nostrum sit! Provident, nemo nihil vitae recusandae incidunt quas sapiente magni alias odit. Odit.
-          Quidem illo eos, illum doloribus explicabo doloremque similique nisi animi qui ipsum voluptate molestiae autem fugit temporibus consectetur tempora repudiandae obcaecati? Ut culpa officia necessitatibus quis magni beatae at adipisci?
-          Rem facere nam sunt. Incidunt similique laboriosam veritatis explicabo placeat soluta, eveniet aspernatur aut voluptas architecto ab dignissimos unde nesciunt? Commodi officiis harum praesentium aut quisquam itaque deleniti quam quia!
-          Odio modi fugit maxime praesentium expedita corrupti perferendis repudiandae quasi, dolores at, recusandae illum eum officiis illo quod! Minima id esse et quisquam alias doloribus fugiat dolorem consequuntur eveniet odit.
-          Eaque explicabo vero nemo quasi quas voluptate accusamus nostrum? Nesciunt, nobis hic maiores culpa laudantium illum cum soluta obcaecati excepturi velit quis voluptatibus, non quibusdam. Quia earum ea quaerat asperiores.
-          At, enim. Facilis veniam quisquam eius expedita nobis accusamus eum quibusdam quae labore molestiae ex, facere consectetur nemo incidunt laborum iusto inventore libero natus hic nisi est reprehenderit in magnam.
-          Odio, temporibus fugiat nisi vero non voluptas sequi repellat, nam necessitatibus qui quos eaque, voluptate quis dolores incidunt quibusdam veniam dicta odit suscipit molestiae? Optio commodi ipsum necessitatibus vitae quod?
-          Doloribus magnam architecto qui? Earum rerum harum reiciendis, in cum ad obcaecati similique eveniet consequuntur, assumenda illum enim fuga iusto maiores temporibus molestias? Ratione sit, iure a doloribus dolore vel!
-    </div>
-      
-    </div>
-    <div class="footer-bottom">
+      <div id="addMeet" style="max-height:700px; overflow-y: scroll"class="col-4">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12">
-              <!--Footer Bottom-->
-              <p class="text-xs-center">&copy; Copyright 2018.  All rights reserved.</p>
+            <div class="col-sm-12">
+              <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="Assets/img/images.png" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Name</h4>
+                  <p class="card-text">venue.</p>
+                </div>
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="Assets/img/images.png" alt="Card image cap">
+                  <div class="card-block">
+                      <h4 class="card-title">Name</h4>
+                      <p class="card-text">venue.</p> 
+                    </div>
+                  <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="Assets/img/images.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Name</h4>
+                        <p class="card-text">venue.</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div id="" class="col-1"></div>
+      <div id="addMaps" class="col-7">
+
+      </div>
 
     </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <!--Footer Bottom-->
+            <p class="text-xs-center">&copy; Copyright 2018. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -85,4 +104,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./Assets/javascript/js.js"></script>
   </body>
+
 </html>
