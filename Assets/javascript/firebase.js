@@ -8,20 +8,38 @@
 // };
 // firebase.initializeApp(config);
 
-// // datebase Var
-// var database = firebase.database()
+
+// datebase Var
+var userDatabase = firebase.database()
+
+// $("#login").on("click", function (event) {
+//     event.preventDefault()
+//     var input = $("#loginUser").val()
+//     console.log(input)
+// })
+
+// $("#singUpBtn").on("click", function () {
+//     // event.preventDefault()
+//     var input = $("#registerUser").val()
+//     console.log(input)
+// })
+
 
 //register button, need to upload to firebase.
 $("#signUpBtn").on("click", function () {
-var user = $("#registerUser").val()
 
-console.log(user)
+    var user = $("#registerUser").val()
+    
+    console.log(user)
+    
+    userDatabase.ref('/'+user)
+    
+    var newUser = {
+        user: user,
+        // myEvents:{
+    
+        // }
+    }
+    
+    })
 
-var newUser = {
-    user: user,
-    // myEvents:{
-
-    // }
-}
-
-})
