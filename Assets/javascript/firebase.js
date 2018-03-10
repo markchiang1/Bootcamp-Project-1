@@ -8,6 +8,10 @@
 // };
 // firebase.initializeApp(config);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d04d7d103ed5fa5fcd64dfe8ac7bbc47c9690aeb
 // datebase Var
 var userDatabase = firebase.database()
 
@@ -22,6 +26,7 @@ var userDatabase = firebase.database()
 //     var input = $("#registerUser").val()
 //     console.log(input)
 // })
+<<<<<<< HEAD
 // // datebase Var
 // var database = firebase.database()
 
@@ -39,3 +44,25 @@ var newUser = {
 }
 
 })
+=======
+
+
+//register button, need to upload to firebase.
+$("#signUpBtn").on("click", function () {
+
+    var user = $("#registerUser").val()
+    
+    console.log(user)
+    
+    userDatabase.ref('/'+user)
+    
+    var newUser = {
+        user: user,
+        // myEvents:{
+    
+        // }
+    }
+    
+    })
+
+>>>>>>> d04d7d103ed5fa5fcd64dfe8ac7bbc47c9690aeb
