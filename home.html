@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <title>Title</title>
   <!-- Required meta tags -->
@@ -11,6 +10,22 @@
     crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="Assets/css/style.css">
+  <!-- Google Maps Styling Below:: -->
+  <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #addMaps {
+        height: 700px;
+        width:100%;
+        clear:both;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 
 <body>
@@ -103,8 +118,16 @@
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
     <script src="./Assets/javascript/js.js"></script>
-    <script scr="Assets/javascript/firebase.js"></script>
+   <script scr="Assets/javascript/firebase.js"></script>
+
+    <!-- Google Maps API Script Below: -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M&callback=initMap">
+    </script>
+
   </body>
 
 </html>
