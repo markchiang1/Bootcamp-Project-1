@@ -11,9 +11,9 @@ firebase.initializeApp(config);
 // datebase Var
 var database = firebase.database()
 
-$("#submit").on("click", function () {
+$("#signUpBtn").on("click", function () {
 var user = $("#registerUser").val()
-
+console.log(user)
 var newUser = {
     user: name,
 }
