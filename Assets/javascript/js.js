@@ -38,14 +38,15 @@ var database = firebase.database()
 
 // Click Event Below runs AJAX for Google maps AND meetup events in searched City
 $("#submitBtn").on("click", function () {
-    event.preventDefault()
-    
     $("#addMaps").empty()
 
     var mapSearch = $("#search").val()
     
     var inputSearch = String(mapSearch)
 
+    database.ref().push({
+        city:mapSearch
+    })
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
