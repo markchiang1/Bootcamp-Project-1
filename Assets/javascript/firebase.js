@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 // datebase Var
-var database = firebase.database()
+var userDatabase = firebase.database()
 
 // $("#login").on("click", function (event) {
 //     event.preventDefault()
@@ -28,7 +28,7 @@ $("#signUpBtn").on("click", function () {
     
     console.log(user)
     
-    database.ref('/'+user)
+    userDatabase.ref('/'+user)
     
     var newUser = {
         user: user,
