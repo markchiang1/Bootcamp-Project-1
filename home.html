@@ -11,12 +11,28 @@
     crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="Assets/css/style.css">
+  <style> 
+  
+  body {font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Assets/img/img.jpg");
+    background-size: cover;
+  }
+  .navbar{ 
+    color: whitesmoke;
+    
+}
+#login{
+  color: aliceblue;
+    
+}
+
+  </style>
 </head>
 
 <body>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Working Title</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-none">
+      <h3>Working Title</h3> 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a id ="login"class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               Log In
             </a>
@@ -45,7 +61,7 @@
     </nav>
 
     <div class="row">
-      <div id="addMeet" style="max-height:700px; overflow-y: scroll"class="col-4">
+      <div id="addMeet" style="max-height:550px; overflow-y: scroll"class="col-md-4">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -86,7 +102,7 @@
         <div class="row">
           <div class="col-xs-12">
             <!--Footer Bottom-->
-            <p class="text-xs-center">&copy; Copyright 2018. All rights reserved.</p>
+            <p style="color: whitesmoke;"class="text-xs-center">&copy; Copyright 2018. All rights reserved.</p>
           </div>
         </div>
       </div>
