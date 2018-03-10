@@ -12,29 +12,10 @@ firebase.initializeApp(config);
 var database = firebase.database()
 
 // $("#login").on("click", function (event) {
-//     event.preventDefault()
-//     var input = $("#loginUser").val()
-//     console.log(input)
-// })
-
-// $("#singUpBtn").on("click", function () {
-//     // event.preventDefault()
-//     var input = $("#registerUser").val()
-//     console.log(input)
-// })
-
 $("#signUpBtn").on("click", function () {
-    var user = $("#registerUser").val()
-    
-    console.log(user)
-    
-    database.ref('/'+user)
-    
-    var newUser = {
-        user: user,
-        // myEvents:{
-    
-        // }
-    }
-    
-    })
+var user = $("#registerUser").val()
+console.log(user)
+var newUser = {
+    user: name,
+}
+})
