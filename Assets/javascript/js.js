@@ -74,9 +74,17 @@ $("#submitBtn").on("click", function () {
                     var longitude = response.results[i].group.group_lon
                     var latitude = response.results[i].group.group_lat
                     var eventName = response.results[i].name
+                    var image = response.results[i].photo_url
+                    var meetupURL = response.results[i].event_url
+                    $("#addMeet").append("<div class='card' style='width: 20rem;'><img class='card-img-top'src="+
+                    image+" alt=<img href='https://secure.meetupstatic.com/photos/event/2/e/a/d/600_450131949.jpeg'/>><div class='card-block'><h4 class='card-title'>"+
+                    eventName+"</h4><p><a href='"+
+                    meetupURL+"'>Go To Event</a></p></div>")
                 // console.log("EventName: "+eventName)
                 // console.log("Latitude Response: "+latitude)
                 // console.log("Longitude Response: "+ longitude)
+                console.log(meetupURL)
+
             }
             locationsArray.push("lat: "+latitude,"lng: "+longitude)
             // dataArray.push(locationsArray)
