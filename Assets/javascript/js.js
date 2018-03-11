@@ -50,7 +50,7 @@ $("#submitBtn").on("click", function () {
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
-
+    
     // Database push of city Search
     // database.ref().push({
     //     city:mapSearch
