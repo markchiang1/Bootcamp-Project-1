@@ -57,14 +57,16 @@ var database = firebase.database()
 // Click Event Below runs AJAX for Google maps AND meetup events in searched City
 $("#submitBtn").on("click", function () {
     $("#addMaps").empty()
+    $("#addMeet").empty()
+    
     event.preventDefault()
     var mapSearch = $("#search").val()
     
     var inputSearch = String(mapSearch)
 
-    database.ref().push({
-        city:mapSearch
-    })
+    // database.ref().push({
+    //     city:mapSearch
+    // })
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
@@ -81,7 +83,7 @@ $("#submitBtn").on("click", function () {
 
     // var APIKey = "fi6P2HJpI6tlPq7b1fupGzo8PFi1AYXA"  
 
-    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=15"
+    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=30"
 
             $.ajax({
                 url: meetupURL,
@@ -160,8 +162,8 @@ $("#submitBtn").on("click", function () {
                         var marker = new google.maps.Marker({
                             position: meetposition,
                             map:map,
-                            title:eventName
-                            });
+                            animation: google.maps.Animation.DROP,
+                        });
                             marker.setMap(map);
                             for (l=0; l< response.results.length; l++){
                                 var contentString = response.results[l].name
