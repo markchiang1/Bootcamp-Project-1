@@ -156,15 +156,17 @@
 
         <div id="id01" class="modal">
           
-          <form class="modal-content animate" action="/action_page.php">
+          <form class="modal-content animate">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
         
             <div class="container">
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" id="longinUser" required>
+              <input type="text" placeholder="Enter Username" name="uname" id="loginUser" required>
         
+              <!-- <label for="pwUser"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="pwUser" id="pwUser" required> -->
                 
               <button id="login" type="submit">Login</button>
               <button id=signUp type="signup">Sign Up</button>
@@ -202,7 +204,7 @@
             }
         }
         $("#signUp").on("click", function(){
-            // location.href="signin.html"
+            location.href="signin.html"
         })
         </script>
 

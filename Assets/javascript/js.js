@@ -70,7 +70,7 @@ $("#submitBtn").on("click", function () {
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
-    
+
     // Database push of city Search
     // database.ref().push({
     //     city:mapSearch
@@ -179,8 +179,9 @@ $("#submitBtn").on("click", function () {
                     locationMap(searchLocation)
                 // Closing Geocode Ajax below
                 })
-                // Meetup Ajax call closing bracket Below
-                })
-             // closing click event brackets below
+            // Meetup Ajax call closing bracket Below
             })
+        
+                
+})// closing click event brackets below
                     
