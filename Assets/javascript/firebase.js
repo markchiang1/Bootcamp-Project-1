@@ -14,37 +14,8 @@ var database = firebase.database()
 var user = ''
 var foundUser = false
 
-
-
-
-// database.ref().on("child_added", function(snapshot){
-    //     var object = snapshot.val()
-    //     console.log(object)
-    // })
-    // object.child('name').off();
-function checkUser(u1){
-    var usersRef = firebase.database().ref(u1+"/")
-    usersRef.orderByChild("name").equalTo(u1).on("child_added", function(snapshot){
-        var object = snapshot.val().name
-        // console.log(u1)
-        console.log(object)
-        if(u1=== object){
-            alert("user in database")
-            console.log("Found Child")
-            foundUser=true
-            console.log(foundUser)  
-            return true
-            location.href="home.html"
-        }
-    })
-}
-
-$("#login").on("click", function (event) {
-    event.preventDefault()
-    var input = $("#loginUser").val()
-    console.log(input)
-
-    // var inDatabase = checkUser(input)
+//**** Had an Function afterCheck() below here ********************
+// var inDatabase = checkUser(input)
     // if(inDatabase===false){
     //     alert("must sign up")
     //     foundUser = false;
@@ -54,6 +25,31 @@ $("#login").on("click", function (event) {
     //     $('#user').html(user)
     //     location.href="home.html"
     // }
+
+function checkUser(u1){
+    var usersRef = firebase.database().ref(u1+"/")
+    usersRef.orderByChild("name").equalTo(u1).on("child_added", function(snapshot){
+        var object = snapshot.val().name
+        console.log(u1)
+        console.log(object)
+        if(u1=== object){
+            alert("user in database")
+            foundUser=true
+            console.log(foundUser)  
+            // location.href="home.html"
+        }
+        else{
+            console.log("next child")
+            foundUser = false
+        }
+    }) 
+}
+
+$("#login").on("click", function (event) {
+    event.preventDefault()
+    var input = $("#loginUser").val()
+    console.log(input)
+    checkUser(input)
 })
 
 
@@ -64,15 +60,12 @@ $("#signUpBtn").on("click", function (event){
     event.preventDefault()
     user = $("#registerUser").val().trim()
     console.log(user)
-    var inDatabase = checkUser(user)
-    if(inDatabase){
-        alert("That user already exists")
-        alert("imposter")
-    }
-    else{
-        database.ref("/"+user).push({name:user})
-        alert("added user")
-    }
+
+    // checkUser(user)
+    
+
+   checkUser(user)
+    
 })
     
 
