@@ -26,6 +26,10 @@
   color: lavender;
     
 }
+#loginHeader{
+  color:whitesmoke;
+  font-weight:bolder;
+}
 #footer{
   color: whitesmoke;
   text-align: center;
@@ -107,18 +111,21 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <br>
+      <br>
+      <br>
+      <br>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a id ="login"class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a id ="loginHeader"class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <span id="user"></span>
+              <span id="user"> </span>
               <div class="dropdown-divider"></div>
-              <button id="logBtn">log Out</button>
+              <button id="logBtn">Log Out</button>
             </div>
           </li>
         </ul>
@@ -137,7 +144,11 @@
         <div class="container">
           <div class="row">
             <div id="addMeet" class="col-sm-12 w3-animate-left">
-             <h4 style="color:white">Meet Ups </h4>
+             <h4 style="color:white">Meet Ups
+               <br>
+               <br>
+               Search a City to Find a Meetup!
+            </h4>
               <!-- Dynamically adding event cards Here -->
 
             </div>
@@ -174,8 +185,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
+    <script src="./Assets/javascript/localstorage.js"></script>
+    <script scr="Assets/javascript/firebase.js"></script>
     <script src="./Assets/javascript/js.js"></script>
-   <script scr="Assets/javascript/firebase.js"></script>
 
     <!-- Google Maps API Script Below: -->
     <script async defer
