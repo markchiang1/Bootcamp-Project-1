@@ -1,14 +1,18 @@
 
 
 
-// $("#login").on('click', function (event) {
-//     event.preventDefault()
-//     var input = $("#loginUser").val()
-//     console.log(input)
-//     if(localStorage.getItem(input)===null){
-//         console.log('Please Sign Up')
-//     }
-// })
+$("#login").on('click', function (event) {
+    event.preventDefault()
+    var input = $("#loginUser").val()
+    console.log(input)
+    // if(localStorage.getItem(input)===null){
+    //     console.log('Please Sign Up')
+    // }
+    localStorage.setItem('user', input)
+    location.href="home.html"
+
+})
+
 
 // $("#signUpBtn").on("click", function (event){
 //     event.preventDefault()
