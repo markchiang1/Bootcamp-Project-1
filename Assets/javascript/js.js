@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 // database varriabe for firebase call
 var database = firebase.database()
-
+var userRecall = localStorage.getItem('name')
 // all variable declared globally to use
     var mapSearch
     var inputSearch
@@ -50,7 +50,8 @@ var database = firebase.database()
         map: map
         });
     }
-    
+
+$('#login').html(userRecall)
 
 // AJAX Calls Below
 
