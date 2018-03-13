@@ -1,218 +1,318 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
+
+<head>
+    <title>Enablr</title>
+    <link rel="shortcut icon" href="Assets/img/logo.ico" />
     <link rel="shortcut icon" href="Assets/img/logo.ico" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="Assets/css/style.css">
-  </head>
-  <style>
-        body {font-family: Arial, Helvetica, sans-serif;
-            background-image: url("Assets/img/background.jpg");
-            background-size: cover;
-        }
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    /* Full-width input fields */
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+
+    button {
+        background-color: rgb(8, 14, 8);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    /* Center the image and position the close button */
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+
+    #intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: .8;
+        font-family: 'Abril Fatface', serif;
+        background-color:slategray;
+        width: 85%;
+        height: 85%;
+        background-image: url("Assets/img/img.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    #intro {
+        color: black;
+        background-color: slategray;
+        opacity: 1;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         
-        /* Full-width input fields */
-        input[type=text], input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
+    }
+    @-webkit-keyframes colorchange {
+     0% {
+       color:red;
+     }
+     10% { 
+       color:yellow
+     }
+     20% { 
+       color: teal;
+     }
+     30% {
+       color: white;
+     }
+     40% {
+       color: darkblue;
+     }
+     50% {
+       color: hotpink;
+     }
+     60% {
+       color: goldenrod;
+     }
+     70% {
+       color: teal;
+     }
+     80% {
+       color: blue;
+     }
+     90% {
+       color: darkblue;
+     }
+     100% {
+       color: greenyellow;
+     }
+
+    }
+    /* Add Zoom Animation */
+
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
         }
-        
-        /* Set a style for all buttons */
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
+        to {
+            -webkit-transform: scale(1)
         }
-        
-        button:hover {
-            opacity: 0.8;
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
         }
-        
-        /* Extra styles for the cancel button */
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
+        to {
+            transform: scale(1)
         }
-        
-        /* Center the image and position the close button */
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-        #intro{
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%,-50%);
-           border: 1px solid;
-           padding-top: 140px;
-           padding-bottom: 140px;
-           opacity: .7;
-           color:white;
-           font-family: 'Abril Fatface', serif;
-           
-        }
-        
-        .container {
-            padding: 16px;
-        }
-        
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+
+    @media screen and (max-width: 300px) {
         span.psw {
-            float: right;
-            padding-top: 16px;
+            display: block;
+            float: none;
         }
-        
-        /* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            padding-top: 60px;
+        .cancelbtn {
+            width: 100%;
         }
-        
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-        }
-        
-        /* The Close Button (x) */
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: red;
-            cursor: pointer;
-        }
-        
-        /* Add Zoom Animation */
-        .animate {
-            -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
-        }
-        
-        @-webkit-keyframes animatezoom {
-            from {-webkit-transform: scale(0)} 
-            to {-webkit-transform: scale(1)}
-        }
-            
-        @keyframes animatezoom {
-            from {transform: scale(0)} 
-            to {transform: scale(1)}
-        }
-        
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-            span.psw {
-               display: block;
-               float: none;
-            }
-            .cancelbtn {
-               width: 100%;
-            }
-           
-        }
-        </style>
-        </head>
-        
-        <body>
-            
-        <div id="intro"class="textBox text-center">
-        
-        <h2>Login Form</h2>
-        
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-users"></i></button>
-        </div>
+    }
+</style>
+</head>
 
-        <div id="id01" class="modal">
-          
-          <form class="modal-content animate">
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="Assets/img/My Movie 1.mp4" type="video/mp4">
+    </video>
+
+    <div id="intro" class="textBox text-center">
+
+        <Div id="title">
+            <span style="font-size: 150px;-webkit-animation:colorchange 20s infinite alternate;">Hello!</span>
+        </Div>
+        <span style="font-size: 55px;">Ready.. Set..</span>
+<br><br>
+
+        <button onclick="document.getElementById('id01').style.display='block'" style=" font-size:55px;width:auto;">Meet!
+            <br>
+            <i class="fas fa-users"></i>
+        </button>
+    </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate">
             <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close w3-button w3-white w3-border-red" title="Close Modal">&times;</span>
             </div>
-        
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" id="loginUser" required>
-        
-              <!-- <label for="pwUser"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="pwUser" id="pwUser" required> -->
-                
-              <button id="login" type="submit">Login</button>
-              <button id=signUp type="signup">Sign Up</button>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-        
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
-        
-    
-        
-      
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="Assets/javascript/js.js"></script>
-    <script src="Assets/javascript/firebase.js"></script>
-    <!-- <script src="Assets/javascript/localstorage.js"></script> -->
+            <div class="container">
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="uname" id="loginUser" required>
+
+                <!-- <label for="pwUser"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="pwUser" id="pwUser" required> -->
+
+                <button id="loginBtn" type="submit">Login</button>
+                <button id=signUp type="signup">Sign Up</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+            </div>
+        </form>
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="Assets/javascript/js.js"></script>
+        <script src="Assets/javascript/firebase.js"></script>
+        <!-- <script src="Assets/javascript/localstorage.js"></script> -->
 
         <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-        }
-        $("#signUp").on("click", function(){
-            location.href="signin.html"
-        })
+            $("#signUp").on("click", function () {
+                // location.href = "signin.html"
+            })
         </script>
 
-  </body>
-</html>
+</body>
 
+</html>
