@@ -158,15 +158,17 @@
 
         <div id="id01" class="modal">
           
-          <form class="modal-content animate" action="/action_page.php">
+          <form class="modal-content animate">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
         
             <div class="container">
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" id="longinUser" required>
+              <input type="text" placeholder="Enter Username" name="uname" id="loginUser" required>
         
+              <!-- <label for="pwUser"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="pwUser" id="pwUser" required> -->
                 
               <button id="login" type="submit">Login</button>
               <button id=signUp type="signup">Sign Up</button>
@@ -193,6 +195,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="Assets/javascript/js.js"></script>
     <script src="Assets/javascript/firebase.js"></script>
+    <!-- <script src="Assets/javascript/localstorage.js"></script> -->
+
         <script>
         // Get the modal
         var modal = document.getElementById('id01');

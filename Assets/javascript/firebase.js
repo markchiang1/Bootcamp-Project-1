@@ -1,45 +1,74 @@
-// var config = {
-//     apiKey: "AIzaSyAcCsp_1wcbimGlS4lKAtxlNz55p5-HbX4",
-//     authDomain: "bootcamp-project-1-47c35.firebaseapp.com",
-//     databaseURL: "https://bootcamp-project-1-47c35.firebaseio.com",
-//     projectId: "bootcamp-project-1-47c35",
-//     storageBucket: "bootcamp-project-1-47c35.appspot.com",
-//     messagingSenderId: "692503538126"
-// };
+var config = {
+    apiKey: "AIzaSyAcCsp_1wcbimGlS4lKAtxlNz55p5-HbX4",
+    authDomain: "bootcamp-project-1-47c35.firebaseapp.com",
+    databaseURL: "https://bootcamp-project-1-47c35.firebaseio.com",
+    projectId: "bootcamp-project-1-47c35",
+    storageBucket: "bootcamp-project-1-47c35.appspot.com",
+    messagingSenderId: "692503538126"
+};
 // firebase.initializeApp(config);
 
-
 // datebase Var
-var userDatabase = firebase.database()
+var database = firebase.database()
 
-// $("#login").on("click", function (event) {
-//     event.preventDefault()
-//     var input = $("#loginUser").val()
-//     console.log(input)
-// })
+var user = ''
+var foundUser = false
 
-// $("#singUpBtn").on("click", function () {
-//     // event.preventDefault()
-//     var input = $("#registerUser").val()
-//     console.log(input)
-// })
+//**** Had an Function afterCheck() below here ********************
+// var inDatabase = checkUser(input)
+    // if(inDatabase===false){
+    //     alert("must sign up")
+    //     foundUser = false;
+    //     database.ref("/"+input).push({name:input})
+    // }
+    // else{
+    //     $('#user').html(user)
+    //     location.href="home.html"
+    // }
+
+function checkUser(u1){
+    var usersRef = firebase.database().ref(u1+"/")
+    usersRef.orderByChild("name").equalTo(u1).on("child_added", function(snapshot){
+        var object = snapshot.val().name
+        console.log(u1)
+        console.log(object)
+        if(u1=== object){
+            alert("user in database")
+            foundUser=true
+            console.log(foundUser)  
+            // location.href="home.html"
+        }
+        else{
+            console.log("next child")
+            foundUser = false
+        }
+    }) 
+}
+
+$("#login").on("click", function (event) {
+    event.preventDefault()
+    var input = $("#loginUser").val()
+    console.log(input)
+    checkUser(input)
+})
 
 
-//register button, need to upload to firebase.
-$("#signUpBtn").on("click", function () {
+// playersRef.orderByChild("name").equalTo("John").on("child_added", function(data) {
+//     console.log("Equal to filter: " + data.val().name);
 
-    var user = $("#registerUser").val()
-    
+$("#signUpBtn").on("click", function (event){
+    event.preventDefault()
+    user = $("#registerUser").val().trim()
     console.log(user)
+
+    // checkUser(user)
     
-    userDatabase.ref('/'+user)
+
+   checkUser(user)
     
-    var newUser = {
-        user: user,
-        // myEvents:{
+})
     
-        // }
-    }
-    
-    })
+
+
+            
 
