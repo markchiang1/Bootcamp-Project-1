@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Enablr</title>
+  <link rel="shortcut icon" href="Assets/img/logo.ico" />
+    <link rel="shortcut icon" href="Assets/img/logo.ico" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,11 +41,21 @@
         font-family: 'Abril Fatface', serif;
 
     }
+    #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+    }
 </style>
 </head>
 
 <body>
-
+    <video autoplay muted loop id="myVideo">
+        <source src="Assets/img/My Movie 1.mp4" type="video/mp4">
+       </video>
     <div id="intro" class="textBox text-center">
 
         <div class="container">

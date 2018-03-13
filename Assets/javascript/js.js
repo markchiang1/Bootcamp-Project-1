@@ -11,7 +11,16 @@ firebase.initializeApp(config);
 
 // database varriabe for firebase call
 var database = firebase.database()
+<<<<<<< HEAD
 var userRecall = localStorage.getItem('name')
+=======
+
+// user Variable below:
+var username = "Joe Schmoe"
+
+$("#login").html(username)
+
+>>>>>>> 2d7450d653a4c5e4b40b5a9f540c5f2852441524
 // all variable declared globally to use
     var mapSearch
     var inputSearch
@@ -59,22 +68,22 @@ $('#login').html(userRecall)
 $("#submitBtn").on("click", function () {
     $("#addMaps").empty()
     $("#addMeet").empty()
-    
     event.preventDefault()
     var mapSearch = $("#search").val()
     
     var inputSearch = String(mapSearch)
 
     // database.ref().push({
-    //     city:mapSearch
+        // city:mapSearch
     // })
     var plusAdd = inputSearch.replace(" ","+")
     
     var googleAPIKey = "AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M"
-
+// __________________________________________________
     // Database push of city Search
     // database.ref().push({
     //     city:mapSearch
+// ____________________________________________________
     // })
         $("#search").val("")
 
@@ -84,7 +93,7 @@ $("#submitBtn").on("click", function () {
 
     // var APIKey = "fi6P2HJpI6tlPq7b1fupGzo8PFi1AYXA"  
 
-    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=30"
+    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=35"
 
             $.ajax({
                 url: meetupURL,
@@ -119,10 +128,10 @@ $("#submitBtn").on("click", function () {
                     // var eventState = response.results[i].venue.state
                     var eventTime = response.results[i].time
                     var timeInput = moment(eventTime).format("dddd, MMMM Do YYYY, h:mm a")
-                    $("#addMeet").append("<div class='card' style='width: 20rem;'><img class='card-img-top'src="+
+                    $("#addMeet").append("<div class='card w3-animate-left' style='width: 20rem;'><img class='card-img-top'src="+
                     image+" alt='alt-card-top'><div class='card-block'><h4 class='card-title'>"+
-                    eventName+"</h4><p class='event-address'></p><hr><p class='event-time'>"+timeInput+"</p><a href='"+
-                    meetupURL+"'target='_blank'>Go To Event</a></p></div>")
+                    eventName+"</h4><p class='event-address'></p><p class='event-time'>"+timeInput+"</p><a href='"+
+                    meetupURL+"'target='_blank'>Go To Event</a></p></div><hr>")
 
                     // $(".event-address").append(locationDetails)
                     
@@ -163,8 +172,8 @@ $("#submitBtn").on("click", function () {
                         var marker = new google.maps.Marker({
                             position: meetposition,
                             map:map,
-                            animation: google.maps.Animation.DROP,
-                        });
+                            title:eventName
+                            });
                             marker.setMap(map);
                             for (l=0; l< response.results.length; l++){
                                 var contentString = response.results[l].name
@@ -180,9 +189,8 @@ $("#submitBtn").on("click", function () {
                     locationMap(searchLocation)
                 // Closing Geocode Ajax below
                 })
-            // Meetup Ajax call closing bracket Below
+                // Meetup Ajax call closing bracket Below
+                })
+             // closing click event brackets below
             })
-        
-                
-})// closing click event brackets below
                     
