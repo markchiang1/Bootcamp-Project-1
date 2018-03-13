@@ -3,6 +3,7 @@
 
 <head>
   <title>Enablr</title>
+  <link rel="shortcut icon" href="Assets/img/logo.ico" />
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="Assets/css/style.css">
   <style> 
   
@@ -39,6 +41,7 @@
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    z-index: -1;
     }
 
 #addMeet{
@@ -46,8 +49,9 @@
   opacity: .9;
 }
 .card{
-  background: gray;
+  background-color: rgb(53, 49, 49);
   text-align: center;
+  color: floralwhite;
 }
   /* <!-- Google Maps Styling Below: --> */
   
@@ -73,11 +77,11 @@
 
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="https://r6---sn-a5mlrn7s.googlevideo.com/videoplayback?ipbits=0&mm=31%2C29&mn=sn-a5mlrn7s%2Csn-a5meknl6&signature=AAB1C99C2209FFB0891FDB1573DF3F4ECFC8A3DD.518731DCF40E70591633BED14ECC0D53F60DFF2D&pl=16&mt=1520717684&sparams=dur%2Cei%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cexpire&id=o-APQ2gqJPR469ZDO-SdOwgxbWA-sAH2zltpSquZ-QwN50&source=youtube&mv=m&dur=257.277&initcwndbps=2883750&itag=22&ms=au%2Crdu&requiressl=yes&mime=video%2Fmp4&fvip=6&lmt=1518158977520666&expire=1520739398&c=WEB&key=yt6&ip=169.234.86.135&ratebypass=yes&ei=5k-kWpKJF5O5-AOh846IBQ" type="video/mp4">
+        <source src="Assets/img/My Movie 1.mp4" type="video/mp4">
        </video>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-none">
-      <h3><i class="fas fa-users"></i>Enablr</h3> 
+      <h3 class="w3-animate-fading"><i class="fas fa-users"></i>Enablr</h3> 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -111,7 +115,7 @@
 
         <div class="container">
           <div class="row">
-            <div id="addMeet" class="col-sm-12">
+            <div id="addMeet" class="col-sm-12 w3-animate-left">
              <h4 style="color:white">Meet Ups </h4>
               <!-- Dynamically adding event cards Here -->
 
@@ -119,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div id="addMaps" class="col-sm-8">
+      <div id="addMaps" class="col-sm-8 w3-animate-right">
       
       </div>
 
@@ -156,6 +160,8 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_xvToL8Tf7cO5--9oGD9SLvkhjOGGM4M&callback=initMap">
     </script>
+    <!-- Moment JS script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js" integrity="sha256-9wM2SPsbZp8aQ0KHzSeg+KsAYGtc7GRTombqhhXvLSg=" crossorigin="anonymous"></script>
 
   </body>
 
