@@ -11,16 +11,7 @@ firebase.initializeApp(config);
 
 // database varriabe for firebase call
 var database = firebase.database()
-<<<<<<< HEAD
 var userRecall = localStorage.getItem('name')
-=======
-
-// user Variable below:
-var username = "Joe Schmoe"
-
-$("#login").html(username)
-
->>>>>>> 2d7450d653a4c5e4b40b5a9f540c5f2852441524
 // all variable declared globally to use
     var mapSearch
     var inputSearch
