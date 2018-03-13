@@ -14,14 +14,11 @@ var userRecall = localStorage.getItem('user')
 $(document).ready(function(){
     $('#loginHeader').html(userRecall)
     console.log(userRecall)
-    $("#user").html("Hi "+userRecall+"!")
+    $("#username").html("Hi "+userRecall+"!")
 })
 // database varriabe for firebase call
 var database = firebase.database()
-<<<<<<< HEAD
-var userRecall = localStorage.getItem('name')
-=======
->>>>>>> 21675e21aeccdef3ec548c973b65c7bb1b34d8fd
+var userRecall = localStorage.getItem('user')
 // all variable declared globally to use
     var mapSearch
     var inputSearch
