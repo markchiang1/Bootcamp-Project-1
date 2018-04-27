@@ -91,7 +91,7 @@ $("#submitBtn").on("click", function () {
 
     // var APIKey = "fi6P2HJpI6tlPq7b1fupGzo8PFi1AYXA"  
 
-    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=35"
+    var meetupURL = "https://cors-anywhere.herokuapp.com/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=35"
 
             $.ajax({
                 url: meetupURL,
