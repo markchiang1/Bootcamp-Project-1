@@ -15,7 +15,7 @@ Enablr is an application which allows individuals to looks for local tech meetup
 - Font Awesome fonts implementation
 - CORS (for Server callbacks)
 
-##Screenshots
+####Screenshots
 
 **Landing Page**
 
@@ -23,8 +23,8 @@ Enablr is an application which allows individuals to looks for local tech meetup
 
 ---------------------
 
-![Login Page](./Assets/img/login.png"Login/Sign Up")
+![Login Page](./Assets/img/login.png "Login/Sign Up")
 
 ---------------------
 
-![Results Page](./Assets/img/results.png"Login/Sign Up")
+![Results Page](./Assets/img/results.png "Login/Sign Up")
