@@ -5,6 +5,12 @@ Enablr is an application which allows individuals to looks for local tech meetup
 - Search local Tech events, Meetup provides 30 closest events to your City searched.
 - Google Maps renders the location with Markers, so users know whats the best location to them.
 
+#### Developers
+- John DeJesus : Styling, CSS, Front End Desgin
+- Jodeci Le : Styling, CSS, Front End Design
+- Mark Chiang : Hosting, Back End
+- Vicente Gonzalez : API Integration, Back End
+
 **Tech Used:**
 - Meetup API
 - Google Maps API
@@ -15,9 +21,9 @@ Enablr is an application which allows individuals to looks for local tech meetup
 - Font Awesome fonts implementation
 - CORS (for Server callbacks)
 
-####Screenshots
+### Screenshots
 
-**Landing Page**
+
 
 ![Full Site](./Assets/img/landing.png "Home Page")
 
