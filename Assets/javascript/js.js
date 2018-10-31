@@ -9,18 +9,16 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var userRecall = localStorage.getItem('user')
+
+$(document).ready(function(){
+    $('#loginHeader').html(userRecall)
+    console.log(userRecall)
+    $("#username").html("Hi "+userRecall+"!")
+})
 // database varriabe for firebase call
 var database = firebase.database()
-<<<<<<< HEAD
-var userRecall = localStorage.getItem('name')
-=======
-
-// user Variable below:
-var username = "Joe Schmoe"
-
-$("#login").html(username)
-
->>>>>>> 2d7450d653a4c5e4b40b5a9f540c5f2852441524
+var userRecall = localStorage.getItem('user')
 // all variable declared globally to use
     var mapSearch
     var inputSearch
@@ -60,7 +58,7 @@ $("#login").html(username)
         });
     }
 
-$('#login').html(userRecall)
+// $('#loginHeader').html(userRecall)
 
 // AJAX Calls Below
 
@@ -93,7 +91,7 @@ $("#submitBtn").on("click", function () {
 
     // var APIKey = "fi6P2HJpI6tlPq7b1fupGzo8PFi1AYXA"  
 
-    var meetupURL = "https://crossorigin.me/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=35"
+    var meetupURL = "https://cors-anywhere.herokuapp.com/https://api.meetup.com/2/open_events?key=133614f646262c555e21068514847&sign=true&photo-host=public&country=us&city="+mapSearch+"&state=CA&text=code&category=34&page=35"
 
             $.ajax({
                 url: meetupURL,
@@ -130,8 +128,8 @@ $("#submitBtn").on("click", function () {
                     var timeInput = moment(eventTime).format("dddd, MMMM Do YYYY, h:mm a")
                     $("#addMeet").append("<div class='card w3-animate-left' style='width: 20rem;'><img class='card-img-top'src="+
                     image+" alt='alt-card-top'><div class='card-block'><h4 class='card-title'>"+
-                    eventName+"</h4><p class='event-address'></p><p class='event-time'>"+timeInput+"</p><a href='"+
-                    meetupURL+"'target='_blank'>Go To Event</a></p></div><hr>")
+                    eventName+"</h4><p class='event-address'></p><p class='event-time'>"+timeInput+"</p><button><a href='"+
+                    meetupURL+"'target='_blank'>Go To Event</a></button></p></div><hr>")
 
                     // $(".event-address").append(locationDetails)
                     

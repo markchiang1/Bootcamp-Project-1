@@ -12,19 +12,45 @@
     crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Copse|Farsan|Pacifico|Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="Assets/css/style.css">
   <style> 
   
-  body {font-family: Arial, Helvetica, sans-serif;
+  body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Copse', serif;
+    /* font-family: 'Farsan', cursive; */
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Quicksand', sans-serif; */
    
   }
   .navbar{ 
     color: lavender;
     
 }
+h1{
+    /* font-family: 'Copse', serif; */
+    /* font-family: 'Farsan', cursive; */
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Quicksand', sans-serif; */
+}
+h4{
+  font-family: 'Copse', serif;
+        /* font-family: 'Farsan', cursive;
+        font-family: 'Pacifico', cursive; */
+        /* font-family: 'Quicksand', sans-serif; */
+}
 #login{
   color: lavender;
     
+}
+#loginHeader{
+  color:whitesmoke;
+  font-weight:bolder;
+  /* font-family: 'Copse', serif; */
+  /* font-family: 'Farsan', cursive; */
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Quicksand', sans-serif;
 }
 #footer{
   color: whitesmoke;
@@ -66,7 +92,7 @@
        * element that contains the map. */
       #addMaps {
         
-        height:750px;
+        height:550px;
         width:100%;
         clear:both;
         opacity: .9;
@@ -90,7 +116,15 @@
       #addMeet{
       height: 700px;
       opacity: .9;
+      /* font-family: 'Copse', serif; */
+      font-family: 'Quicksand', sans-serif;
   }
+}
+#dropDown{
+  background-color: rgb(53, 49, 49);
+  color: white;
+  text-align: center;
+  opacity: .8;
 }
     </style>
 
@@ -102,23 +136,26 @@
        </video>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-none">
-      <h3 class="w3-animate-fading"><i class="fas fa-users"></i>Enablr</h3> 
+      <h1  class="w3-animate-fading"><i class="fas fa-users"></i>Enablr</h1> 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <br>
+      <br>
+      <br>
+      <br>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a id ="login"class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a id ="loginHeader"class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <span id="user"></span>
+            <div id= "dropDown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <span id="username"></span>
               <div class="dropdown-divider"></div>
-              <button id="logBtn">log Out</button>
+              <button id="logBtn" onclick="location.href ='index.html'">Log Out</button>
             </div>
           </li>
         </ul>
@@ -137,7 +174,11 @@
         <div class="container">
           <div class="row">
             <div id="addMeet" class="col-sm-12 w3-animate-left">
-             <h4 style="color:white">Meet Ups </h4>
+             <h4 style="color:white">Meet Ups
+               <br>
+               <br>
+               Search a City to Find a Meetup!
+            </h4>
               <!-- Dynamically adding event cards Here -->
 
             </div>
@@ -174,8 +215,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
+    <script src="./Assets/javascript/localstorage.js"></script>
+    <script scr="Assets/javascript/firebase.js"></script>
     <script src="./Assets/javascript/js.js"></script>
-   <script scr="Assets/javascript/firebase.js"></script>
 
     <!-- Google Maps API Script Below: -->
     <script async defer

@@ -1,7 +1,7 @@
 
+// var userRecall = localStorage.getItem('name')
 
-
-$("#login").on('click', function (event) {
+$("#loginBtn").on('click', function (event) {
     event.preventDefault()
     var input = $("#loginUser").val()
     console.log(input)
@@ -13,7 +13,17 @@ $("#login").on('click', function (event) {
 
 })
 
-
+$("#signUp").on('click', function (event) {
+    event.preventDefault()
+    var input = $("#loginUser").val()
+    console.log(input)
+    // if(localStorage.getItem(input)===null){
+    //     console.log('Please Sign Up')
+    // }
+    localStorage.setItem('user', input)
+    location.href="home.html"
+    
+})
 // $("#signUpBtn").on("click", function (event){
 //     event.preventDefault()
 //     user = $("#registerUser").val().trim()
